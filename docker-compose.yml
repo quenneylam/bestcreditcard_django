@@ -1,0 +1,26 @@
+version: "3.9"
+   
+services:
+  db:
+    image: mysql:8.0
+    container_name: creditcard-db
+      #volumes:
+      #- ./data/db:/var/lib/mysql/data
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - creditcard
+  app:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    container_name: creditcard-app
+    volumes:
+      - ./app:/src
+    ports:
+      - "80:8000"
+    networks:
+      - creditcard
+    
+networks:
+  creditcard:
+    driver: bridge
