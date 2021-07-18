@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+    <!--
+        <title>Danh mục | xxxxxxx </title>
+    -->
+    {% endblock %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/danh-muc.css' %}">
+</head>
+
+
+<body>
+
+<!------------header------------>
+ <div class="header">
+      <nav>
+        <ul>
+          <li><a href="{%url 'dm4'%}">Hỏi đáp</a></li>
+          <li><a href="{%url 'a1'%}">Blog</a></li>
+          <li><a href="{%url 'dm2'%}">Nhà phát hành</a></li>
+          <li><a href="{%url 'dm1'%}">Danh mục</a></li>
+        </ul>
+      </nav>
+
+       <h1 id="logo"><a href="{% url 'home' %}">bestcreditcard</a></h1>
+ </div>
+
+<div id="main">
+
+
+    {% block head-dm %}
+    <!--
+        <img src="{% static 'images/cc-banner-education_3.png'%}">
+        <div id="header-title">
+          <h2>Thẻ tín dụng để trả phí bảo hiểm </h2>
+          <p>Bạn có biết, nếu dùng thẻ tín dụng để thanh toán phí bảo hiểm, bạn sẽ được hoàn tiền đến 5%? <br>
+            Cùng <b>bestcreditcard</b> tìm kiếm và lựa chọn chiếc thẻ tín dụng mang đến cho
+            bạn nhiều ưu đãi mua sắm nhất!
+          </p>
+        </div>
+    -->
+    {% endblock %}
+
+
+    <div id="dm-icon">
+        <h4>Chọn thẻ tín dụng ưng ý cho nhu cầu của mình nhé!</h4>
+
+
+        <div class="icon">
+            <img src="{% static 'images/shopping.svg' %}" alt="Mua sắm">
+            <p><a href="{% url 'dm1' %}">Mua sắm</a></p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'images/0percent.svg ' %}" alt="Trả góp 0%">
+            <p><a href="{% url 'dm2' %}">Trả góp 0%</a></p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'images/airline.svg' %}" alt="Dặm bay">
+            <p><a href="{% url 'dm3' %}">Dặm bay</a></p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'images/traffic.svg ' %}" alt="Đi lại">
+            <p><a href="{% url 'dm4' %}">Đi lại</a></p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'images/insurance.svg ' %}" alt="Bảo hiểm">
+            <p><a href="{% url 'dm5' %}">Bảo hiểm</a></p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'images/online.svg ' %}" alt="Thanh toán online">
+            <p><a href="{% url 'dm6' %}">Thanh toán online</a></p>
+        </div>
+        <div class="icon">
+            <img src="{% static 'images/freecard.svg ' %}" alt="Thẻ miễn phí">
+            <p><a href="{% url 'dm7' %}">Thẻ miễn phí</a></p>
+        </div>
+
+    </div><!--dm-icon-->
+
+    {% block card-tag %}
+    <!-- thẻ gồm hình và thông tin -->
+    {% endblock %}
+
+
+    {% block dm-title %}
+    <!--
+        <div class="title">
+                <h1>Bạn nghĩ sao nếu đóng phí bảo hiểm mà còn được hoàn lại tiền?<br>
+                Để <b>bestcreditcard</b> chỉ bạn nhé!
+                </h1>
+           <br>
+            <p>Bảo hiểm mang lại cho bạn sự an tâm. Bạn có biết, với thẻ tín dụng hoàn tiền,
+                khi đóng phí bảo hiểm bạn còn được hoàn lại một khoản tiền nhỏ theo phần trăm
+                số tiền bạn chi tiêu. Trả tiền bảo hiểm mà còn được hoàn tiền, thật tuyệt phải không nào?<br>
+                Nhiều thẻ tín dụng còn có các chương trình hợp tác với nhiều nhãn hàng và cửa hàng
+                bán lẻ từ dịch vụ ăn uống, mua sắm đến tập luyện, đi lại với các tỷ lệ phần trăm
+                hoàn tiền thay đổi (cao nhất là 10%). Lưu ý rằng, một vài ngân hàng đòi hỏi bạn phải
+                giữ lại hóa đơn sau khi giao dịch để có sự đối chiếu rõ ràng khi muốn hoàn tiền.
+            </p>
+        </div>
+    -->
+    {% endblock %}
+
+</div>
+
+<div class='footer'>
+    <div id='f1'>
+        <ul>
+            <li><h3>Liên hệ</h3></li>
+            <li><b>Hotline : </b> (028) 123456</li>
+            <li><b>Email : </b> ozark@hotmail.com</li>
+            <li><b>Trụ sở : </b> 123 Nguyễn Chí Thanh , phường 1, quận 5, TPHCM</li>
+        </ul>
+
+        <div id="f1a">
+            <img src="{% static 'images/fb.png ' %}" alt="Facebook">
+            <img src="{% static 'images/tw.png ' %}" alt="Twitter">
+            <img src="{% static 'images/insta.png ' %}" alt="Instagram">
+            <img src="{% static 'images/linkin.png ' %}" alt="Linkin">
+            <img src="{% static 'images/youtube.png ' %}" alt="Youtube">
+        </div>
+    </div>
+
+    <div id='f2'>
+        <ul>
+            <li><h3>Dành cho khách hàng</h3></li>
+            <li><a href="#contact">Đăng ký tư vấn miễn phí</a></li>
+            <li><a href="#contact">Gặp chuyên gia tư vấn</a></li>
+            <li><a href="#about">Hướng dẫn mở tài khoản</a></li>
+            <li><a href="#about">Cơ hội hợp tác và kinh doanh</a></li>
+            <li><a href="#about">Bảng giá dịch vụ</a></li>
+        </ul>
+    </div>
+
+
+    <div id='f3'>
+        <ul>
+            <li><h3>Giới thiệu</h3></li>
+            <li><a href="#home">Trung tâm trợ giúp</a></li>
+            <li><a href="#home">Thỏa thuận sử dụng</a></li>
+            <li><a href="#home">Chính sách bảo mật</a></li>
+            <li><a href="#home">Cơ hội việc làm</a></li>
+
+        </ul>
+    </div>
+
+</div><!--footer-->
+
+</body>
+</html>

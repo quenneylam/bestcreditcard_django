@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  	<title>bestcreditcard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/home.css">
+</head>
+
+
+<body>
+
+  <!------------header------------>
+  <div class="header">
+      <nav>
+        <ul>
+			<li><a href="{% url 'dm1' %}">Danh mục</a></li>
+			<li><a href="{% url 'login' %}">Đăng nhập</a></li>
+			<li><a href="{% url 'a1' %}">Blog</a></li>
+			<li><a href="{% url 'dm2' %}">Nhà phát hành</a></li>
+			<li><a href="{% url 'dm1' %}">Danh mục</a></li>
+
+        </ul>
+      </nav>
+
+	  <h1 id="logo"><a href="{% url 'home' %}">bestcreditcard</a></h1>
+
+
+	  <img src="{% static 'images/credit_card_illurstrations.png'%}" alt="Finance your life">
+
+
+
+
+    <div class='introduce'>
+      <h1>Tìm kiếm. So sánh. Chọn lựa!</h1>
+
+      <p><b>bestcreditcard</b> cung cấp giải pháp cho nhu cầu quan trọng nhất của người dùng khi họ đang phân vân giữa quá nhiều lựa chọn. Trang web này mang đến cho người dùng những công cụ hữu ích như so sánh thẻ tín dụng, tham khảo đánh giá từ người dùng khác, và bảng xếp hạng các sản phẩm thẻ tín dụng.</p>
+
+    </div><!--introduce-->
+  </div><!---header-->
+
+  <div class='main'>
+  	<div id="a1">
+  		<div class="a1a" >
+  			<h2>Standard Chartered Thẻ Tín Dụng Platinum CashBack</h2>
+
+  			<p>Trả góp 0%br tại hơn 230 đối tác (FPT Shop, Nguyễn Kim,<br>
+  			 Điện máy xanh, Tiki, Edena, YOLA, TOPICA,...)<br>
+			<b>Yêu cầu thu nhập: 10.000.000đ </b><br>
+			<b>Phí thường niên: 1.000.000đ</b></p>
+			<button type="button">Chi tiết</button>
+
+  		</div>
+
+  		<div class="a1a">
+  			<img src="{% static 'bd-platinum-credit-card-cc.jpg'%}">
+  		</div><!--để một thẻ-->
+  		<button type="button">Đăng ký</button>
+  		<button type="button">So sánh</button>
+  	</div>
+
+  	<div id="a2">
+  		<h1>Bạn đã biết cách sử dụng GoBear chưa?</h1>
+  		<p>Rất đơn giản. Hãy làm như sau.</p>
+  		<div class="a2a">
+  			<img src="{% static 'images/search2x-1.png'%}">
+  			<h3>Bước 1:</h3>
+  			<h4>Tìm kiếm</h4>
+  			<p>Hãy cho chúng tôi biết về bạn và điều<br>
+  			 bạn đang tìm kiếm. Chúng tôi sẽ tìm<br>
+  			 giúp bạn những sản phẩm đáp ứng<br>
+  			 đúng nhu cầu của mình.</p>
+  		</div>
+
+  		<div class="a2a" >
+  			<img src= "{% static 'images/compare2x-1.png'%}">
+  			<h3>Bước 2:</h3>
+  			<h4>So sánh</h4>
+  			<p>Chọn những sản phẩm bạn thích và so<br>
+  			 sánh những sản phẩm đó với nhau.<br>
+  			 Hãy cân nhắc xem bạn ưng ý nhất với<br>
+  			 sản phẩm nào.</p>
+  		</div>
+  		<div class="a2a" >
+  			<img src="{% static 'images/go2x-1_0.png'%}">
+  			<h3>Bước 3:</h3>
+  			<h4>Chọn lựa</h4>
+  			<p>Hãy chọn sản phẩm bạn muốn và bấm<br>
+  			 nút màu xanh lá cây. Vậy là xong!<br>
+  			 Chúng tôi sẽ kết nối bạn với các đối tác<br>
+  			 của GoBear để bạn trực tiếp mang về <br>
+  			 đúng thứ mình cần.</p>
+  		</div>
+
+  	</div>
+
+  	<div id="a3"><!--mẹo-->
+  		<h1>Cùng trang bị kiến thức với blog của <b>bestcreaditcard</b>.</h1>
+  		<p>Blog của <b>bestcreaditcard</b> mang đến cho bạn những bí quyết, thông tin ưu đãi và tin tức mới nhất liên quan<br>
+  		 đến lĩnh vực tài chính cá nhân về thẻ tín dụng</p>
+
+  		 <div class="artical">
+  		 	<div class="img-artical">
+  		 		<img src="{% static 'images/v211batch10-gift-18-money_2.jpg' %}">
+  		 	</div>
+  		 	<div class="title-artical">
+  		 		<h3><a href="{%url 'a1'%}">5 hành động vô tình <br>khiến bạn bị đánh cắp<br>
+					thông tin thẻ</a></h3>
+  		 	</div>
+  		 </div>
+
+  		 <div class="artical">
+  		 	<div class="img-artical">
+  		 		<img src="{% static 'images/v211batch10-aum-220-family_2.jpg' %}">
+  		 	</div>
+  		 	<div class="title-artical">
+  		 		<h3><a href="{%url 'a2'%}">Bí quyết quản lý tài chính <br>
+					chi tiêu gia đình với<br> thẻ tín dụng</a></h3>
+  		 	</div>
+  		 </div>
+
+  		 <div class="artical">
+  		 	<div class="img-artical">
+  		 		<img src="{% static 'images/v211batch10-aum-257-sale_2.jpg' %}">
+  		 	</div>
+  		 	<div class="title-artical">
+  		 		<h3><a href="{%url 'a4'%}">Tại sao thẻ tín dụng là<br> xu hướng thu hút?</a></h3>
+  		 	</div>
+  		 </div>
+
+  		 <div class="artical">
+  		 	<div class="img-artical">
+  		 		<img src=" {% static 'images/v211batch10-minty-184-savings_2.jpg' %}">
+  		 	</div>
+  		 	<div class="title-artical">
+  		 		<h3><a href="{%url 'a3'%}">Cách để nâng cao điểm<br> tín dụng</a></h3>
+  		 	</div>
+  		 </div>
+
+  	</div>
+
+   </div>
+
+
+
+
+<div class='footer'>
+  <div id= 'f1'>
+    <ul>
+      <li><h3>Liên hệ</h3></li>
+      <li><b>Hotline : </b> (028) 123456</li>
+      <li><b>Email : </b>  ozark@hotmail.com</li>
+      <li><b>Trụ sở : </b>  123 Nguyễn Chí Thanh , phường 1, quận 5, TPHCM </li>
+    </ul>
+
+    <div id="f1a">
+        <img src="{% static 'images/fb.png'%}" alt="Facebook">
+        <img src="{% static 'images/tw.png'%}" alt="Twitter">
+        <img src="{% static 'images/insta.png'%}" alt="Instagram">
+        <img src="{% static 'images/linkin.png'%}" alt="Linkin">
+        <img src="{% static 'images/youtube.png'%}" alt="Youtube">
+    </div>
+  </div>
+
+  <div id ='f2'>
+    <ul>
+        <li><h3>Dành cho khách hàng</h3></li>
+        <li><a href="#contact">Đăng ký tư vấn miễn phí</a></li>
+        <li><a href="#contact">Gặp chuyên gia tư vấn</a></li>
+        <li><a href="#about">Hướng dẫn mở tài khoản</a></li>
+        <li><a href="#about">Cơ hội hợp tác và kinh doanh</a></li>
+        <li><a href="#about">Bảng giá dịch vụ</a></li>
+    </ul>
+  </div>
+
+
+  <div id='f3'>
+    <ul>
+        <li><h3>Giới thiệu</h3></li>
+        <li><a href="#home">Trung tâm trợ giúp</a></li>
+        <li><a href="#home">Thỏa thuận sử dụng</a></li>
+        <li><a href="#home">Chính sách bảo mật</a></li>
+        <li><a href="#home">Cơ hội việc làm</a></li>
+
+        </ul>
+  </div>
+
+</div><!--footer-->
+
+</body>
+</html>

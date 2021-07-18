@@ -1,0 +1,67 @@
+{% extends "Products/base_product.html"%}
+{% load staticfiles %}
+
+{% block title %}
+<title>Danh mục | Trả góp 0%</title>
+{% endblock %}
+
+{% block head-dm %}
+<img src="{% static 'images/cc-banner-cashback_4.png' %}">
+<div id="header-title">
+    <h2>Thẻ tín dụng để mua trả góp 0% </h2>
+    <p>Bạn đang tìm thẻ tín dụng để được ưu đãi mua sắm trả góp 0%
+        hàng điện tử hay gói tập gym?<br>
+        <b>bestcreditcard</b> sẽ giúp bạn tìm kiếm chiếc thẻ với
+        chính sách trả góp 0% với nhiểu cửa hàng nhất!
+    </p>
+</div>
+{% endblock %}
+
+{% block card-tag %}
+    {% for card in list_cart %}
+        <div class="card">
+            <div class="top-card">
+                <h3>{{ card.name_card }}</h3>
+                <h4>Đánh giá chung 5,0 / 5</h4>
+            </div><!--top-card-->
+            <div class="bottom-card">
+                <img src="/media/{{ card.hinh_anh_sp }}">
+                 <div class="bottom-card-title">
+                    <p>
+                        <b>Hạn mức :</b> {{ card.han_muc }}<br>
+                        <b>Yêu cầu thu nhập:</b> {{ card.yeu_cau_thu_nhap }}<br>
+                        <b>Phí thường niên:</b> {{ card.phi_thuong_nien }}<br>
+                        <b>Phí phát hành :</b> {{ card.phi_phat_hanh }}<br>
+                        <b>Số ngày miễn lãi :</b> {{ card.so_ngay_mien_lai }}<br>
+                    </p>
+                    <button type="button">
+                            <a href="{{ card.get_absolute_url }}">Chi tiết</a>
+                    </button>
+                </div><!--bottom-card-title-->
+                <div class="button-card">
+                    <button type="button">
+                        <a href="{% url 'form_register_customer' %}">Đăng ký</a>
+                    </button>
+                    <button type="button">So sánh</button>
+                </div><!--button-card-->
+             </div><!--bottom-card-->
+        </div><!--card-->
+    {% endfor %}
+{% endblock %}
+
+{% block dm-title %}
+<div class="title">
+    <h1>Bạn có muốn mua sắm thả ga không lo về giá? <br>
+        Để <b>bestcreditcard</b> chỉ bạn nhé!
+    </h1>
+    <br>
+    <p>Thẻ tín dụng trả góp 0% là một phương tức thanh toán hiện đại giúp bạn không phải trả toàn bộ chi phí trong một
+        lần nhưng vẫn được sở hữu món hàng yêu thích.<br><br>
+
+        Mua sắm thoải mái, rinh đồ về nhà mà không cần trả hết một lần. Bạn có thường săn khuyến mại mỗi dịp lễ hay nhân
+        kỷ niệm của các trung tâm thương mại? Hãy tận dụng lợi thế mua sắm của thẻ tín dụng và bạn sẽ có cơ hội trở
+        thành khách hàng thân thiết tại những trung tâm mua sắm nổi tiếng!
+    </p>
+</div>
+{% endblock %}
+

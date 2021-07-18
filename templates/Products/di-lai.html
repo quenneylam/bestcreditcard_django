@@ -1,0 +1,68 @@
+{% extends "Products/base_product.html"%}
+{% load staticfiles %}
+
+{% block title %}
+<title>Danh mục | Đi lại</title>
+{% endblock %}
+
+{% block head-dm %}
+<img src="{% static 'images/cc-banner-promotions.png' %}">
+<div id="header-title">
+    <h2>Thẻ tín dụng để đi lại </h2>
+    <p>Bạn thường xuyên sử dụng Taxi, Grab và Uber? <br>
+        Cùng <b>bestcreditcard</b> sẽ giúp bạn tiết kiệm được nhiều chi phí với thẻ tín dụng
+        ưu đãi <br>riêng cho công việc di chuyển thường xuyên đấy!
+    </p>
+</div>
+{% endblock %}
+
+{% block card-tag %}
+    {% for card in list_cart %}
+        <div class="card">
+            <div class="top-card">
+                <h3>{{ card.name_card }}</h3>
+                <h4>Đánh giá chung 5,0 / 5</h4>
+            </div><!--top-card-->
+            <div class="bottom-card">
+                <img src="/media/{{ card.hinh_anh_sp }}">
+                 <div class="bottom-card-title">
+                    <p>
+                        <b>Hạn mức :</b> {{ card.han_muc }}<br>
+                        <b>Yêu cầu thu nhập:</b> {{ card.yeu_cau_thu_nhap }}<br>
+                        <b>Phí thường niên:</b> {{ card.phi_thuong_nien }}<br>
+                        <b>Phí phát hành :</b> {{ card.phi_phat_hanh }}<br>
+                        <b>Số ngày miễn lãi :</b> {{ card.so_ngay_mien_lai }}<br>
+                    </p>
+                    <button type="button">
+                            <a href="{{ card.get_absolute_url }}">Chi tiết</a>
+                    </button>
+                </div><!--bottom-card-title-->
+                <div class="button-card">
+                    <button type="button">
+                        <a href="{% url 'form_register_customer' %}">Đăng ký</a>
+                    </button>
+                    <button type="button">So sánh</button>
+                </div><!--button-card-->
+             </div><!--bottom-card-->
+        </div><!--card-->
+    {% endfor %}
+{% endblock %}
+
+{% block dm-title %}
+<div class="title">
+    <h1>Bạn nghĩ sao nếu được rong ruổi khắp nơi mà còn được giảm giá?<br>
+        Để <b>bestcreditcard</b> chỉ bạn nhé!
+    </h1>
+    <br>
+    <p>Thời gian gần đây, giá xăng dầu cứ liên tục tăng tạo thêm gánh nặng kinh tế cho mọi người. Nhưng với sự phát
+        triển của dịch vụ đi lại trong thời đại 4.0, bạn có thể nghĩ đến việc sử dụng phương tiện thay thế này để tiết
+        kiệm tiền xăng dầu hàng tháng đấy.<br><br>
+
+        Một số ngân hàng sẽ có ưu đãi giảm giá trực tiếp với các đối tác như Grab, Vinasun, Mai Linh khi thanh toán dịch
+        vụ bằng thẻ tín dụng của ngân hàng có liên kết. Lưu ý, để đạt được ưu đãi, bạn cần phải chi tiêu một số tiền tối
+        thiểu do ngân hàng quy định trong điều khoản và điều kiện sử dụng thẻ.
+    </p>
+</div>
+{% endblock %}
+
+

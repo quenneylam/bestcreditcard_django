@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+    <!--
+        <title>Danh mục | xxxxxxx </title>
+    -->
+    {% endblock %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/user.css' %}">
+</head>
+
+
+<body>
+
+<!------------header------------>
+ <div class="header">
+      <nav>
+        <ul>
+          <li><a href="{%url 'dm4'%}">Hỏi đáp</a></li>
+          <li><a href="{%url 'a1'%}">Blog</a></li>
+          <li><a href="{%url 'dm2'%}">Nhà phát hành</a></li>
+          <li><a href="{%url 'dm1'%}">Danh mục</a></li>
+        </ul>
+      </nav>
+
+       <h1 id="logo"><a href="{% url 'home' %}">bestcreditcard</a></h1>
+ </div>
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+<div class='footer'>
+    <div id='f1'>
+        <ul>
+            <li><h3>Liên hệ</h3></li>
+            <li><b>Hotline : </b> (028) 123456</li>
+            <li><b>Email : </b> ozark@hotmail.com</li>
+            <li><b>Trụ sở : </b> 123 Nguyễn Chí Thanh , phường 1, quận 5, TPHCM</li>
+        </ul>
+
+        <div id="f1a">
+            <img src="{% static 'images/fb.png ' %}" alt="Facebook">
+            <img src="{% static 'images/tw.png ' %}" alt="Twitter">
+            <img src="{% static 'images/insta.png ' %}" alt="Instagram">
+            <img src="{% static 'images/linkin.png ' %}" alt="Linkin">
+            <img src="{% static 'images/youtube.png ' %}" alt="Youtube">
+        </div>
+    </div>
+
+    <div id='f2'>
+        <ul>
+            <li><h3>Dành cho khách hàng</h3></li>
+            <li><a href="#contact">Đăng ký tư vấn miễn phí</a></li>
+            <li><a href="#contact">Gặp chuyên gia tư vấn</a></li>
+            <li><a href="#about">Hướng dẫn mở tài khoản</a></li>
+            <li><a href="#about">Cơ hội hợp tác và kinh doanh</a></li>
+            <li><a href="#about">Bảng giá dịch vụ</a></li>
+        </ul>
+    </div>
+
+
+    <div id='f3'>
+        <ul>
+            <li><h3>Giới thiệu</h3></li>
+            <li><a href="#home">Trung tâm trợ giúp</a></li>
+            <li><a href="#home">Thỏa thuận sử dụng</a></li>
+            <li><a href="#home">Chính sách bảo mật</a></li>
+            <li><a href="#home">Cơ hội việc làm</a></li>
+
+        </ul>
+    </div>
+
+</div><!--footer-->
+
+</body>
+</html>

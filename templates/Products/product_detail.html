@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>detail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/product_detail.css">
+</head>
+<body>
+	 <div class="header">
+      <nav>
+        <ul>
+          <li><a href="danh-muc.html">Hỏi đáp</a></li>
+          <li><a href="#contact">Blog</a></li>
+          <li><a href="#about">Nhà phát hành</a></li>
+          <li><a href="#about">Danh mục</a></li>
+        </ul>
+      </nav>
+      	 <h2 id="logo">bestcreditcard</h2>
+  	</div>
+    {% if card_detail %}
+	<div class="card_detail">
+
+   		<div class="top-card_detail">
+	        <h3>{{ card_detail.name_card }}</h3>
+	        <h4>Đánh giá chung 5,0 / 5</h4>
+    	</div><!--top-card_detail-->
+
+	    <div class="bottom-card_detail">
+	    	<img src="/media/{{ card_detail.hinh_anh_sp }}">
+	         <div class="bottom-card_detail-title">
+	            <p>
+	            	<h3>Thông tin chung</h3>
+		                <b>Hạn mức :</b> {{ card_detail.han_muc }}<br>
+		                <b>Yêu cầu thu nhập:</b> {{ card_detail.yeu_cau_thu_nhap }}<br>
+		                <b>Phí thường niên:</b> {{ card_detail.phi_thuong_nien }}<br>
+		                <b>Phí phát hành :</b> {{ card_detail.phi_phat_hanh }}<br>
+		                <b>Số ngày miễn lãi :</b> {{ card_detail.so_ngay_mien_lai }}<br>
+		                <b>Lãi suất :</b> {{ card_detail.lai_suat }}<br>
+		                <b>Hoàn tiền trung bình:</b> {{ card_detail.hoan_tien_trung_binh }}<br>
+		                <b>Hoàn tiền cao nhất :</b> {{ card_detail.hoan_tien_cao_nhat }}<br>
+
+                	<h3>Các phí cần lưu ý</h3>
+		                <b>Phí ứng tiền mặt :</b>
+		                {{ card_detail.phi_ung_tien_mat }}<br>
+		                <b>Phí giao dịch ngoại tệ :</b>
+		                {{ card_detail.phi_giao_dich_ngoai_te }}<br>
+		                <b>Phí thanh toán chậm :</b>
+		                {{ card_detail.phi_thanh_toan_cham }}<br>
+		                <b>Số tiền tối thiểu phải trả mỗi tháng :</b>
+		                {{ card_detail.so_tien_toi_thieu_phai_tra_moi_thang }}
+		                <br>
+
+               		<h3>Các phí cần lưu ý</h3>
+		                <b>Wireless payment :</b> {{ card_detail.Wireless_payment }}<br>
+		                <b>Tích luỹ ưu đãi bằng :</b> {{ card_detail.tich_luy_uu_dai_bang }}<br>
+		                <b>Trả góp lãi suất 0% :</b> {{ card_detail.tra_gop_lai_suat_0 }}<br>
+		                <b>Chương trình khách hàng thân thiết :</b> {{ card_detail.chuong_trinh_KH_than_thiet }}<br>
+		                <b>Ưu đãi đi lại :</b> {{ card_detail.uu_dai_di_lai }}<br>
+		                <b>Hoàn tiền khi trả phí bảo hiểm :</b> {{ card_detail.hoan_tien_khi_tra_phi_bao_hiem }}<br>
+		                <b>BẢo hiểm du lịch :</b> {{ card_detail.bao_hiem_du_lich }}<br>
+		                <b>Dịch vụ hỗ trợ du lịch :</b> {{ card_detail.dich_vu_ho_tro_du_lich }}<br>
+		                <b>Miễn phòng chờ sân bay :</b> {{ card_detail.mien_phong_cho_san_bay }}<br>
+		                <b>Số lần miễn phòng chờ sân bay trong năm :</b> {{ card_detail.so_lan_mien_phong_cho_san_bay_trong_nam }}<br>
+		                <b>Số người được vào phòng chờ :</b> {{ card_detail.so_nguoi_duoc_mien_vao_phong_cho }}<br>
+		                <b>Khuyễn mãi :</b> {{ card_detail.khuyen_mai }}<br>
+		                <b>Thủ tục phát hành và điều kiện :</b> {{ card_detail.thu_tuc_phat_hanh_va_dieu_kien }}<br>
+		                <b>Biểu phí :</b> {{ card_detail.bieu_phi }}<br>
+				</p>
+
+        </div><!--bottom-card_detail-title-->
+        <div class="button-card_detail">
+            <button type="button">
+                <a href="{% url 'form_register_customer' %}">Đăng ký</a>
+            </button>
+            <button type="button">So sánh
+           </button>
+        </div><!--button-card_detail-->
+     </div><!--bottom-card_detail-->
+</div><!--card_detail-->
+{% endif %}
+
+
+</body>
+</html>

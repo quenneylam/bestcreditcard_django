@@ -1,0 +1,91 @@
+{% extends "Products/base_product.html"%}
+{% load staticfiles %}
+
+{% block title %}
+<title>Danh mục | Dặm bay</title>
+{% endblock %}
+
+{% block head-dm %}
+<img src="{% static 'images/cc-banner-airmiles_2.png' %}">
+<div id="header-title">
+    <h2>Thẻ tín dụng để tích luỹ dặm bay </h2>
+    <p>Chỉ cần dùng thẻ tín dụng để thanh toán tại nhà hàng, siêu thị là bạn đã có thể tích <br>
+        lũy dặm bay của hãng hàng không và được miễn phí phòng chờ sân bay rồi đấy!
+        Cùng  <b>bestcreditcard</b> chọn chiếc thẻ tín dụng
+        giúp bạn du lịch tốt nhất thị thường nhé!
+    </p>
+</div>
+{% endblock %}
+
+{% block card-tag %}
+    {% for card in list_cart %}
+        <div class="card">
+            <div class="top-card">
+                <h3>{{ card.name_card }}</h3>
+                <h4>Đánh giá chung 5,0 / 5</h4>
+            </div><!--top-card-->
+            <div class="bottom-card">
+                <img src="/media/{{ card.hinh_anh_sp }}">
+                 <div class="bottom-card-title">
+                    <p>
+                        <b>Hạn mức :</b> {{ card.han_muc }}<br>
+                        <b>Yêu cầu thu nhập:</b> {{ card.yeu_cau_thu_nhap }}<br>
+                        <b>Phí thường niên:</b> {{ card.phi_thuong_nien }}<br>
+                        <b>Phí phát hành :</b> {{ card.phi_phat_hanh }}<br>
+                        <b>Số ngày miễn lãi :</b> {{ card.so_ngay_mien_lai }}<br>
+                    </p>
+                    <button type="button">
+                            <a href="{{ card.get_absolute_url }}">Chi tiết</a>
+                    </button>
+
+                </div><!--bottom-card-title-->
+                <div class="button-card">
+                    <button type="button">
+                        <a href="{% url 'form_register_customer' %}">Đăng ký</a>
+                    </button>
+                    <button type="button">So sánh</button>
+                </div><!--button-card-->
+             </div><!--bottom-card-->
+        </div><!--card-->
+    {% endfor %}
+{% endblock %}
+
+{% block dm-title %}
+<div class="title">
+    <h1>Bạn nghĩ sao nếu được vi vu muôn nơi không tốn tiền?<br>
+        Để <b>bestcreditcard</b> chỉ bạn nhé!
+    </h1>
+    <br>
+    <p>Tích lũy dặm bay là chương trình của ngân hàng dành cho chủ thẻ tín dụng dùng để tích lũy điểm hoặc số tiền chi
+        tiêu thành dặm bay. Khi đã tích đủ dặm cần thiết, bạn có thể đổi thành vé máy bay để đến thành phố bạn mong
+        muốn.<br><br>
+
+        Mỗi ngân hàng sẽ có hệ thống tích lũy điểm riêng hoặc hợp tác với chương trình tích lũy dặm bay của các hãng
+        hàng không phổ biến như LotusMiles (Vietnam Airlines và SkyTeam), KrisFlyer (Singapore Airlines), Asia Miles
+        (Cathay Pacific Airways).<br><br>
+
+        Ngoài ra, một số thẻ tín dụng còn có ưu đãi đặc biệt để bạn tận hưởng trọn vẹn chuyến du lịch như sử dụng phòng
+        chờ ở các sân bay, bảo hiểm du lịch miễn phí, nâng cấp hạng ghế và nhiều hơn nữa..<br>
+    </p>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
